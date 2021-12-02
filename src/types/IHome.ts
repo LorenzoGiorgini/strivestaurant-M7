@@ -6,7 +6,7 @@ interface IHome {
     label: string;
     price: string;
     description: string;
-    comments: IComments[];
+    comments: IComments[] | [];
 }
 
 interface IComments {
