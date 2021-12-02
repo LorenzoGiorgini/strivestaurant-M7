@@ -1,4 +1,4 @@
-import React from 'react';
+import { FormEvent } from 'react';
 import { useState } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
@@ -21,9 +21,8 @@ const ReservationForm = () => {
     })
   }
 
-  const handleSubmit = async (e: React.ChangeEvent<any>) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    console.log(reservation)
     try {
       let response = await fetch(
         'https://striveschool-api.herokuapp.com/api/reservation',
